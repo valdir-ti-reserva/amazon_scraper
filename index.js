@@ -8,7 +8,9 @@ app.use(express.json());
 const generateUrl = (apiKey) => `http://api.scraperapi.com?api_key=${apiKey}&autoparse=true`
 
 app.get('/', (_, res) => {
-    res.send('Welcome to Amazon Scraper API.');
+    res.status(200).json({
+        message: 'Welcome to Amazon Scraper API.'
+    });
 })
 
 //GET Product Details
